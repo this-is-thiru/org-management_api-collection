@@ -1,0 +1,56 @@
+info:
+  name: Register User
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{ORG_MNGT}}/auth/register"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"email\": \"pthirumalayadav@gmail.com\",\r
+
+      \  \"password\": \"{{PASSWORD}}\",\r
+
+      \  \"newPassword\": \"{{PASSWORD}}\",\r
+
+      \  \"role\": \"USER\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Registers a new user in the system.
+
+  **Endpoint:** `POST {{INVESTMENT_TRACKER_SERVICE}}/auth/register`
+
+  **Purpose:**
+  This endpoint creates a new user account by accepting user details in the request body. It is used during user onboarding to register a user with the specified credentials and role.
+
+  **Request Body Parameters:**
+  - `email` (string, required): The user's email address.
+  - `password` (string, required): The user's password.
+  - `role` (string, required): The role assigned to the user (e.g., 'USER').
+  - `username` (string, optional): The user's display name (if supported by the backend).
+
+  **Note:**
+  - This request is similar to the 'Auth - register' request in the collection and follows the same structure for user registration.
+
+  **Example Body:**
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "yourPassword",
+    "role": "USER",
+    "username": "optionalUsername"
+  }
+  ```
+
+  Ensure all required fields are provided. The response will indicate success or failure of the registration process.

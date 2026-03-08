@@ -1,0 +1,33 @@
+info:
+  name: Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{ORG_MNGT}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{USERNAME}}",
+        "password": "{{PASSWORD}}"
+      }
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        let status = res.getStatus();
+
+        let body = status != 200 ? null : res.getBody();
+        let token = body?.access_token;
+        bru.setEnvVar('JWT_TOKEN', token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: This endpoint is used to authenticate a user. Provide the user's email and password in the request body using the variables {{EMAIL}} and {{PASSWORD}}. Upon successful authentication, a JWT token is returned in the response. Use this token for subsequent authenticated requests.

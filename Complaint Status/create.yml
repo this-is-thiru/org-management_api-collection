@@ -1,0 +1,28 @@
+info:
+  name: create
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{ORG_MNGT}}/complaint-status/create/client/:clientId"
+  params:
+    - name: clientId
+      value: KANHA1
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "clientId": "KANHA1",
+        "name": "TODO",
+        "title": "TODO",
+        "description": "TODO"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

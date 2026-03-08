@@ -1,0 +1,30 @@
+opencollection: 1.0.0
+
+info:
+  name: Org management | shantivanam
+
+request:
+  auth:
+    type: bearer
+    token: "{{JWT_TOKEN}}"
+  variables:
+    - name: jwt_token
+      value: pre_script_value
+    - name: INVESTMENT_TRACKER_SERVICE
+      value: ""
+    - name: __EMAIL__
+      value: ""
+    - name: email
+      value: ""
+    - name: EMAIL
+      value: ""
+    - name: PASSWORD
+      value: ""
+    - name: JWT_TOKEN
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,41 @@
+info:
+  name: create
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{ORG_MNGT}}/complaints/create/client/:clientId/customer/:customerId"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: clientId
+      value: KANHA1
+      type: path
+    - name: customerId
+      value: 2026KANHC5A835757DAB4D98
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "clientId": "KANHA1",
+        "customerId": "2026KANHC5A835757DAB4D98",
+        "title": "Water flow prob in kitchen",
+        "category": "Plumbing",
+        "roomNumber": "C-704",
+        "description": "something",
+        "notes": ["1. Hello notes", "2. Hi notes"],
+        "statusId": 1,
+        "priority": "0"
+        // "assignedTo": "",
+        // "reportedBy": ""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
