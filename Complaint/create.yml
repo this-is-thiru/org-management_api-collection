@@ -23,7 +23,7 @@ http:
         "clientId": "KANHA1",
         "customerId": "2026KANHC5A835757DAB4D98",
         "title": "Water flow prob in kitchen",
-        "category": "Plumbing",
+        "category": "Kitchen",
         "roomNumber": "C-704",
         "description": "something",
         "notes": ["1. Hello notes", "2. Hi notes"],

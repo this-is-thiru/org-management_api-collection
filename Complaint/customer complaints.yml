@@ -1,0 +1,22 @@
+info:
+  name: customer complaints
+  type: http
+  seq: 3
+
+http:
+  method: get
+  url: http://localhost:8080/complaints/all/client/:clientId/customer/:customerId
+  params:
+    - name: customerId
+      value: 2026KANHC5A835757DAB4D98
+      type: path
+    - name: clientId
+      value: KANHA1
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: update complaint status
+  type: http
+  seq: 7
+
+http:
+  method: post
+  url: http://localhost:8080/complaints/update/complaint/%7B%7BcomplaintId%7D%7D
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "statusId": 0,
+        "category": "",
+        "updatedBy": "",
+        "escalateTo": "",
+        "notes": []
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
