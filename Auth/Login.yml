@@ -10,7 +10,10 @@ http:
     type: json
     data: |-
       {
-        "username": "{{USERNAME}}",
+        "loginType": "CLIENT_EMAIL_PASSWORD", // CUSTOMER_ID_PASSWORD
+        "clientId": "KANHA1",
+        "email": "pthirumalayadav@gmail.com",
+      //   "username": "{{USERNAME}}",
         "password": "{{PASSWORD}}"
       }
 

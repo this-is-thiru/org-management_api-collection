@@ -2,8 +2,6 @@ name: Org mngt - Staging
 variables:
   - name: ORG_MNGT
     value: http://localhost:8080
-  - name: JWT_TOKEN
-    value: ""
   - name: USERNAME
     value: ""
   - secret: true
