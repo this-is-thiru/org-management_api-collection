@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8080/complaints/client/:clientId/status/:statusId
+  url: http://localhost:8080/complaint-service/complaints/client/:clientId/status/:statusId
   params:
     - name: clientId
       value: KANHA1

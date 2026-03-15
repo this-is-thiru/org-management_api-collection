@@ -3,6 +3,6 @@ variables:
   - name: ORG_MNGT
     value: http://localhost:8080
   - name: USERNAME
-    value: ""
+    value: 2026KANH22F7E51D6B074ED0
   - secret: true
     name: PASSWORD

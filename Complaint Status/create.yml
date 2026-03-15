@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{ORG_MNGT}}/complaint-status/create/client/:clientId"
+  url: "{{ORG_MNGT}}/complaint-service/complaint-status/create/client/:clientId"
   params:
     - name: clientId
       value: KANHA1

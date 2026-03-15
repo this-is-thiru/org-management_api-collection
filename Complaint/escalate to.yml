@@ -5,10 +5,14 @@ info:
 
 http:
   method: post
-  url: http://localhost:8080/complaints/escalate-to/complaint/%7B%7BcomplaintId%7D%7D
+  url: http://localhost:8080/complaint-service/escalate-to/complaint/:complaintId
   headers:
     - name: Content-Type
       value: application/json
+  params:
+    - name: complaintId
+      value: hii
+      type: path
   body:
     type: json
     data: |-

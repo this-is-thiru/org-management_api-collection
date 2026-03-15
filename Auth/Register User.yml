@@ -8,17 +8,13 @@ http:
   url: "{{ORG_MNGT}}/auth/register"
   body:
     type: json
-    data: "{\r
-
-      \  \"email\": \"pthirumalayadav@gmail.com\",\r
-
-      \  \"password\": \"{{PASSWORD}}\",\r
-
-      \  \"newPassword\": \"{{PASSWORD}}\",\r
-
-      \  \"role\": \"USER\"\r
-
-      }"
+    data: |-
+      {
+        "email": "pthirumalayadav@gmail.com",
+        "password": "{{PASSWORD}}",
+        "newPassword": "{{PASSWORD}}",
+        "role": "USER"
+      }
 
 settings:
   encodeUrl: true
