@@ -1,0 +1,15 @@
+info:
+  name: cache-evict
+  type: http
+  seq: 8
+
+http:
+  method: put
+  url: http://localhost:8080/complaint-service/evict-cache
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{ORG_MNGT}}/auth/login"
+  url: "{{ORG_MNGT}}/user-service/login"
   body:
     type: json
     data: |-

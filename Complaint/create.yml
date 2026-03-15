@@ -5,16 +5,16 @@ info:
 
 http:
   method: POST
-  url: "{{ORG_MNGT}}/complaint-service/complaint/create/client/:clientId/customer/:customerId"
+  url: "{{ORG_MNGT}}/complaint-service/complaint/create/client/:clientId/user/:userId"
   headers:
     - name: Content-Type
       value: application/json
   params:
+    - name: userId
+      value: 2026KANHF67010DDBF1548B2
+      type: path
     - name: clientId
       value: KANHA1
-      type: path
-    - name: customerId
-      value: 2026KANH22F7E51D6B074ED0
       type: path
   body:
     type: json
