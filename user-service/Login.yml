@@ -25,7 +25,9 @@ runtime:
 
         let body = status != 200 ? null : res.getBody();
         let token = body?.access_token;
+        let userId = body?.userId;
         bru.setEnvVar('JWT_TOKEN', token);
+        bru.setEnvVar('USERNAME', userId);
 
 settings:
   encodeUrl: true

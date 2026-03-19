@@ -1,0 +1,29 @@
+info:
+  name: upgrade role
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{ORG_MNGT}}/user-service/user/:userId/upgrade"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: userId
+      value: "{{USERNAME}}"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "newUserId": "2026KANH4C4E516507F2475D",
+        "role": "ADMIN"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

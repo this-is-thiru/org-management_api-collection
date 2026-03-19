@@ -1,0 +1,29 @@
+info:
+  name: update details
+  type: http
+  seq: 3
+
+http:
+  method: put
+  url: "{{ORG_MNGT}}/user-service/user/:userId/details"
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: userId
+      value: "{{USERNAME}}"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Thirumala Yadav Peramasani",
+        "mobileNumber": "9999999999"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
